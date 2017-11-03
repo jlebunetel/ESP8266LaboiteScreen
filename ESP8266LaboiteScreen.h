@@ -17,20 +17,6 @@
 // l'information pour l'image Rouge, puis Verte et enfin Bleue.
 
 
-
-// 32 x 32 monochrome / 2 colors (on and off) / 1 layer (R)
-#define BUFFER_32_32_2 128
-
-// 32 x 16 bicolor / 4 colors (off, red, green, red + green) / 2 layers (RG)
-#define BUFFER_32_16_4 128
-
-// 32 x 16 RGB / 8 colors (xxx, Rxx, xGx, xxB, RGx, RxB, xGB, RGB) / 3 layers (RGB)
-#define BUFFER_32_16_8 192
-
-// 32 x 32 RGB / 8 colors
-#define BUFFER_32_32_8 384
-
-
 // font definition
 #define FONT_DEFAULT 1
 #define FONT_5X7 1
@@ -81,11 +67,10 @@ class Screen {
     uint8_t colors = 0;
 };
 
-
+// 32 x 16 monochrome / 2 colors (on and off) / 1 layer (R)
 #define BUFFER_32_16_2 64
 
 class Screen_32_16_2 : public Screen {
-  // 32 x 16 monochrome / 2 colors (on and off) / 1 layer (R)
   // hérite de la classe Screen
   public:
     Screen_32_16_2(void);
@@ -94,5 +79,19 @@ class Screen_32_16_2 : public Screen {
   private:
     uint8_t _buffer[BUFFER_32_16_2];
 };
+
+// 32 x 32 monochrome / 2 colors (on and off) / 1 layer (R)
+#define BUFFER_32_32_2 128
+
+// 32 x 16 bicolor / 4 colors (off, red, green, red + green) / 2 layers (RG)
+#define BUFFER_32_16_4 128
+
+// 32 x 16 RGB / 8 colors (xxx, Rxx, xGx, xxB, RGx, RxB, xGB, RGB) / 3 layers (RGB)
+#define BUFFER_32_16_8 192
+
+// 32 x 32 RGB / 8 colors
+#define BUFFER_32_32_8 384
+
+
 
 #endif
